@@ -1,0 +1,80 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>Login Page</title>
+<link href="css/global.css" rel="stylesheet" type="text/css" />
+<link href="css/layout.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/login.js"></script>
+</head>
+
+<body>
+<div id="header">
+<div id="register_header">
+   <div class="register_header_left"><img src="images/logo.png" alt="logo"></div>
+   <div class="register_header_right"><a href="index.html" class="blue">HOME PAGE</a> | <a href="product.html" class="blue">BOOKS</a>  | <a href="shopping.html" class="blue">SHOPPING CART</a> |  <a href="login.html" class="blue">LOGIN</a></div>
+   </div>
+</div>
+
+<div id="main">
+  <div class="login_main_left">
+     <div><img src="images/login_main_01.jpg" alt="image">
+          <img src="images/login_main_02.jpg" alt="image">
+          <img src="images/login_main_03.jpg" alt="image">
+    </div>
+     <div class="login_main_end">
+       <dl class="login_green">
+          <dt>More choises,Lower prices</dt>
+          <dd>Millions of products including book, musics, electronics etc. 20% cheaper than offline markets.</dd>
+       </dl>
+       
+         <div class="login_main_dotted"></div>
+       <dl class="login_green">
+          <dt>Free shipping, Cash on delivery</dt>
+          <dd>Free shipping to 100+ cities </dd>
+       </dl>
+       
+       <div class="login_main_dotted"></div>
+      <dl class="login_green">
+          <dt>Better comments and recommendation</dt>
+          <dd>Millions of consumers give you better comments and recommendations</dd>
+       </dl>
+    </div>
+  </div>
+  <div class="login_main_mid">
+    <div class="login_content_top">Please login</div>
+    <div class="login_content_line"></div>
+    <form action="" method="post" onSubmit="return checkLogin()">
+    <dl class="login_content">
+       <dt>Email or Nickname：</dt>
+       <dd><input id="email" type="text" class="login_content_input" onFocus="emailFocus()" onBlur="emailBlur()"></dd>
+    </dl>
+     <dl class="login_content">
+       <dt>Password: </dt>
+       <dd><input id="pwd" type="password" class="login_content_input" onFocus="pwdFocus()" onBlur="pwdBlur()"></dd>
+    </dl>
+     <dl class="login_content">
+       <dt></dt>
+       <dd><input id="btn" value=" " type="submit" class="login_btn_out"  onmouseover="this.className='login_btn_over'"  onmouseout="this.className='login_btn_out'"></dd>
+    </dl>
+    </form>
+    <div class="login_content_dotted"></div>
+    <div class="login_content_end_bg">
+     <div class="login_content_end_bg_top">
+    <label class="login_content_bold">Not a Book Market member？</label>Join us for free，enjoy the best services provided by Book Market...
+     </div>
+     <div class="login_content_end_bg_end">
+     <input  class="login_register_out" value=" " type="button" onmouseover="this.className='login_register_over'"  onmouseout="this.className='login_register_out'" onClick="jump()">
+      </div>
+    
+    </div>
+   
+  </div>
+  
+</div>
+
+<div id="footer">
+<iframe src="footer.html" height="50px" width="900px" frameborder="0"></iframe>
+</div>
+</body>
+</html>

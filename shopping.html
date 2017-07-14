@@ -1,0 +1,132 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>Shopping Cart Page</title>
+<link href="css/global.css" rel="stylesheet" type="text/css" />
+<link href="css/layout.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/shopping.js"></script>
+</head>
+
+<body>
+<div id="header"><iframe src="header.html" height="155px" width="960px" frameborder="0"></iframe></div>
+<!--middle-->
+<div id="main">
+  <div>&nbsp;&nbsp;<img src="images/shopping_myshopping.gif" alt="shopping"> 
+  <!--Recommendations-->
+  <div class="shopping_commend">
+     <div class="shopping_commend_left">Recommendations according to your records</div>
+     <div class="shopping_commend_right"><img src="images/shopping_arrow_up.gif" alt="shopping" id="shopping_commend_arrow" onClick="shopping_commend_show()"></div>
+  </div>
+  <div id="shopping_commend_sort">
+   <div class="shopping_commend_sort_left">
+    <ul>
+      <li class="shopping_commend_list_1">·<a href="#" class="blue">JavaScript Cookbook: Programming the Web</a></li>
+      <li class="shopping_commend_list_2">$65.00</li>
+      <li class="shopping_commend_list_3">$40.09</li>
+      <li class="shopping_commend_list_4"><a href="#" class="shopping_yellow">buy</a></li>
+    </ul>
+     <ul>
+      <li class="shopping_commend_list_1">·<a href="#" class="blue">HTML & CSS: The Complete Reference, Fifth..</a></li>
+      <li class="shopping_commend_list_2">$41.95</li>
+      <li class="shopping_commend_list_3">$37.05</li>
+      <li class="shopping_commend_list_4"><a href="#" class="shopping_yellow">buy</a></li>
+    </ul>
+    
+   </div>
+   <div class="shopping_commend_sort_mid"></div>
+   <div class="shopping_commend_sort_left">
+     <ul>
+      <li class="shopping_commend_list_1">·<a href="#" class="blue">PHP and MySQL Web Development...</a></li>
+      <li class="shopping_commend_list_2">$52.00</li>
+      <li class="shopping_commend_list_3">$37.20</li>
+      <li class="shopping_commend_list_4"><a href="#" class="shopping_yellow">buy</a></li>
+    </ul>
+     <ul>
+      <li class="shopping_commend_list_1">·<a href="#" class="blue">Learning PHP, MySQL & JavaScript:...</a></li>
+      <li class="shopping_commend_list_2">$65.80</li>
+      <li class="shopping_commend_list_3">$40.60</li>
+      <li class="shopping_commend_list_4"><a href="#" class="shopping_yellow">buy</a></li>
+    </ul>
+     
+    </div>
+  </div>
+   
+<div class="shopping_list_top">Items in shopping cart:</div>
+  <div class="shopping_list_border">
+
+     <table width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tr class="shopping_list_title">
+       <td class="shopping_list_title_1">Name</td>
+       <td class="shopping_list_title_2">Credit</td>
+       <td class="shopping_list_title_3">List price</td>
+       <td class="shopping_list_title_4">Deal</td>
+       <td class="shopping_list_title_5">Amount</td>
+       <td class="shopping_list_title_6">Delete</td>
+    </tr>
+    </table>
+     <table width="100%" border="0" cellspacing="0" cellpadding="0" id="myTableProduct">
+   <tr class="shopping_product_list" id="shoppingProduct_01" onMouseOver="productOver('shoppingProduct_01')"  onMouseOut="productOut('shoppingProduct_01')">
+       <td class="shopping_product_list_1"><a href="#" class="blue">Head First HTML and CSS...</a></td>
+       <td class="shopping_product_list_2"><label>189</label></td>
+       <td class="shopping_product_list_3">$<label>52.00</label></td>
+       <td class="shopping_product_list_4">$<label>32.90 </label>(37%)</td>
+       <td class="shopping_product_list_5"><input type="text" value="1" onblur="productCount()"></td>
+       <td class="shopping_product_list_6"><a href="javascript:deleteProduct('shoppingProduct_01')" class="blue">delete</a></td>
+   </tr>
+   <tr class="shopping_product_list" id="shoppingProduct_02" onMouseOver="productOver('shoppingProduct_02')"  onMouseOut="productOut('shoppingProduct_02')">
+       <td class="shopping_product_list_1"><a href="#" class="blue"> Android Application Development All-in-One For Dummies</a></td>
+       <td class="shopping_product_list_2"><label>173</label></td>
+       <td class="shopping_product_list_3">$<label>47.00</label></td>
+       <td class="shopping_product_list_4">$<label>29.30</label>(38%)</td>
+       <td class="shopping_product_list_5"><input type="text" value="1" onBlur="productCount()"></td>
+       <td class="shopping_product_list_6"><a href="javascript:deleteProduct('shoppingProduct_02')" class="blue">delete</a></td>
+   </tr> 
+   
+  <tr class="shopping_product_list" id="shoppingProduct_03" onMouseOver="productOver('shoppingProduct_03')"  onMouseOut="productOut('shoppingProduct_03')">
+       <td class="shopping_product_list_1"><a href="#" class="blue">Player's Handbook</a></td>
+       <td class="shopping_product_list_2"><label>154</label></td>
+       <td class="shopping_product_list_3">$<label>58.80</label></td>
+       <td class="shopping_product_list_4">$<label>35.40</label> (39%)</td>
+       <td class="shopping_product_list_5"><input type="text" value="2" onBlur="productCount()"></td>
+       <td class="shopping_product_list_6"><a href="javascript:deleteProduct('shoppingProduct_03')" class="blue">delete</a></td>
+   </tr>  
+  <tr class="shopping_product_list" id="shoppingProduct_04" onMouseOver="productOver('shoppingProduct_04')"  onMouseOut="productOut('shoppingProduct_04')">
+       <td class="shopping_product_list_1"><a href="#" class="blue">Deep Learning</a></td>
+       <td class="shopping_product_list_2"><label>358</label></td>
+       <td class="shopping_product_list_3">$<label>101.00</label></td>
+       <td class="shopping_product_list_4">$<label>101.00</label> (0%)</td>
+       <td class="shopping_product_list_5"><input type="text" value="1" onBlur="productCount()"></td>
+       <td class="shopping_product_list_6"><a href="javascript:deleteProduct('shoppingProduct_04')" class="blue">delete</a></td>
+   </tr>   
+  
+    </table>   
+     <div class="shopping_list_end">
+      <ul>
+       <li class="shopping_list_end_1"><input name="" type="image" src="images/shopping_balance.gif"></li>
+       <li class="shopping_list_end_2">$<label id="product_total"></label></li>
+       <li class="shopping_list_end_3">Subtotal</li>
+       <li  class="shopping_list_end_4">Saving：$<label class="shopping_list_end_yellow" id="product_save"></label>
+	   <br/>Credit ：
+	   <label class="shopping_list_end_yellow" id="product_integral"></label>
+</li>
+       </ul>
+    </div>
+   
+     
+     
+     
+     
+     
+     
+  </div>
+  
+  
+  
+</div>
+
+<!--Footer start-->
+<div id="footer">
+<iframe src="footer.html" height="50px" width="900px" frameborder="0"></iframe></div>
+</body>
+</html>

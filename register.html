@@ -1,0 +1,85 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>Register Page</title>
+<link href="css/global.css" rel="stylesheet" type="text/css" />
+<link href="css/layout.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/register.js"></script>
+</head>
+<body>
+<div id="header">
+<div id="register_header">
+   <div class="register_header_left"><img src="images/logo.png" alt="logo"></div>
+   <div class="register_header_right"><a href="index.html" class="blue">HOME PAGE</a> | <a href="product.html" class="blue">BOOKS</a>  | <a href="shopping.html" class="blue">SHOPPING CART</a> |  <a href="login.html" class="blue">LOGIN</a></div>
+   </div>
+</div>
+<div id="main">
+  <div class="register_content">
+    <div class="register_top_bg"></div> 
+    <div class="register_mid_bg">
+      <ul>
+        <li class="register_mid_left">Register Information</li>
+        <li class="register_mid_mid">2. Email Confirmation</li>
+        <li class="register_mid_right">3. Register Complete</li>
+    </ul>
+    </div>
+    <div class="register_top_bg_mid">
+     <div class="register_top_bg_two_left"></div>
+     <div class="register_top_bg_two_right"></div>
+     <div class="register_title_bg">
+	  <img src="images/register_pic_02.gif" alt="welcome register">
+	  <br>Take care to protect your personal information online. 
+	  <br>Create unique passwords for each of your online accounts and change those passwords frequently.
+	 </div>
+    </div>
+    <div class="register_dotted_bg"></div>
+    <div class="register_message">
+    <form action="" method="post" id="myform" onSubmit="return zhuCe()">
+     <dl class="register_row">
+        <dt>Email：</dt>
+        <dd><input id="email" type="text" class="register_input" onBlur="checkBlur()" onFocus="emailFocus()"></dd>
+        <dd><div id="email_prompt"></div></dd>
+      </dl>
+      <dl class="register_row">
+         <dt>Nickname：</dt>
+         <dd><input id="nickName" type="text" class="register_input" onBlur="nameBlur()" onFocus="nickFocus()"></dd>
+         <dd><div id="nickName_promt"></div></dd>
+      </dl>
+     <dl class="register_row">
+         <dt>Password：</dt>
+         <dd><input id="pwd" type="password" class="register_input" onBlur="pwdBlur()" onFocus="pwdFocus()"></dd>
+         <dd><div id="pwdId"></div></dd>
+     </dl> 
+     <dl class="register_row"> 
+         <dt>Confirm Password：</dt>
+         <dd><input id="repwd" type="password" class="register_input" onBlur="rePwdBlur()" onFocus="repwdFocus()"></dd>
+         <dd><div id="repwdId"></div></dd>
+     </dl>
+     <dl class="register_row">
+        <dt>Gender：</dt>
+        <dd><input name="sex" type="radio" value="male"> <label>Male</label></dd>
+       <dd> <input name="sex" type="radio" value="female"> <label>Female</label></dd>
+     </dl>
+     <dl class="register_row">
+        <dt>Region：</dt>
+        <dd><select id="province" onChange="changCity()" style="width:100px">
+        	<option>--Province--</option>
+        </select></dd>
+        <dd><select id="city" style="width:100px">
+        	<option>--City--</option>
+        </select></dd>
+      </dl>
+      <div class="registerBtn"><input id="registerBtn" type="image" src="images/register_btn_out.gif" onMouseOver="over()" onMouseOut="out()" onclick="Reg()" ></div>
+   </form>
+    </div>
+    
+    
+  </div>
+  </div>
+<!--Copyright Part-->
+<div id="footer">
+<iframe src="footer.html" height="50px" width="900px" frameborder="0"></iframe>
+</div>
+</body>
+</html>
