@@ -1,5 +1,6 @@
 # Online-Book-Store
 Front-end Project
+
 Tasks:
   1. Implement a home page of an online book store
   2. Implement a login and a register page of the online book store
